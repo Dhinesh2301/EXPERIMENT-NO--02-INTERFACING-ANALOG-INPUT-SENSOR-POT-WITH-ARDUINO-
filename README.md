@@ -1,8 +1,8 @@
- ###  DATE: 
 
-###  NAME: 
-###  ROLL NO :
-###  DEPARTMENT: 
+
+###  NAME: Dhinesh R
+###  ROLL NO :212223220019
+###  DEPARTMENT: IT
 
 **AIM**:  To interface a Analog  input (angular displacement sensor POT) and scale the values up on change in the input.
 
@@ -68,14 +68,46 @@ CIRCUIT DIAGRAM
 
 
 **PROGRAM** 
- 
+```
+int pot;
+int led=7;
+void setup()
+{
+  pinMode(led,OUTPUT);
+  Serial.begin(9600);
+}
+void loop()
+{
+ pot=analogRead(A0);
+ //Serial.print("Value=");
+ Serial.println(pot);
+ if(pot>900)
+ {
+ digitalWrite(LED_BUILTIN, HIGH);
+ delay(1000);
+ digitalWrite(LED_BUILTIN, LOW);
+ delay(1000);
+ }
+ else
+ { digitalWrite(led,LOW);
+  delay(500);
+ }
+}
+```
+### Figure NO 2:
+![Screenshot 2024-02-23 155504](https://github.com/Dhinesh2301/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/151379545/0b0f5ef7-1515-46fb-be42-bd512393a29a)
+
+### stimulation output :
+### Figure no 3 :ON Condition
+![Screenshot 2024-02-23 162041](https://github.com/Dhinesh2301/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/151379545/00849351-48ee-46ee-9f69-df58dc2583db)
+
+### figure no 4:off condition
+![Screenshot 2024-02-23 162056](https://github.com/Dhinesh2301/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/151379545/8f104ad1-745d-4106-ae47-8daa1a0802cc)
+
+### schematic diagram 
 
 
-
-
-
-
-
+![Screenshot 2024-02-23 155616](https://github.com/Dhinesh2301/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/151379545/70af6281-5ccf-4c79-b941-bbffb9fb64ec)
 
 
 **
